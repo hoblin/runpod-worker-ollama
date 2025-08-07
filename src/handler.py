@@ -2,7 +2,6 @@ import runpod
 from utils import JobInput
 from engine import OllamaEngine
 
-
 async def handler(job: any):
     # Just dump the whole input to the console and then return an {"ok": True} response
     print('Job:', job)
