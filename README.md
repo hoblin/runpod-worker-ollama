@@ -1,5 +1,7 @@
 # Runpod serverless runner for ollama
 
+## Simplified version with request pass-through to ollama.
+---
 ## How to use
 
 Start a runpod serverless with the docker container ``svenbrnn/runpod-ollama:latest``. Set ``MODEL_NAME`` environment to a model from ollama.com to automatically download a model.
