@@ -18,6 +18,13 @@ jobs:
       next_version_suffix: ${{ steps.new_release_check.outputs.next_version_suffix }}
 
     steps:
+      - name: 👀 Get the latest ollama-serverless stable release
+        id: custom_image_release
+        uses: pozetroninc/github-action-get-latest-release@v0.8.0
+        with:
+          repository: hoblin/runpod-worker-ollama
+          excludes: prerelease,draft
+
       - name: 🆕 Get the latest ollama release
         id: ollama_release
         uses: dvershinin/lastversion-action@main
