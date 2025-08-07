@@ -21,7 +21,7 @@ jobs:
         id: custom_image_release
         uses: dvershinin/lastversion-action@main
         with:
-          repository: 'SvenBrnn/runpod-worker-ollama'
+          repository: 'hoblin/runpod-worker-ollama'
 
       - name: 🆕 Get the latest ollama release
         id: ollama_release

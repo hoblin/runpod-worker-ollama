@@ -22,7 +22,7 @@ jobs:
         id: custom_image_release
         uses: pozetroninc/github-action-get-latest-release@v0.8.0
         with:
-          repository: SvenBrnn/runpod-worker-ollama
+          repository: hoblin/runpod-worker-ollama
           excludes: prerelease,draft
 
       - name: 🆕 Get the latest ollama release
@@ -43,12 +43,12 @@ jobs:
 
           latest_version=$(echo -e "$custom_version\n$ollama_version" | sort -V | tail -n1)
           echo "has_new_release=true" >> $GITHUB_OUTPUT
-          
+
           # Debug print
           echo "custom_version_orig=$custom_version_orig"
           echo "custom_version=$custom_version"
           echo "ollama_version=$ollama_version"
-          
+
           # Calculate the next_version_suffix to compare with the new release
           # If the custom_version does not equal the latest_version, then it is a new release and we don't need a suffix
           if [ "$custom_version" != "$ollama_version" ]; then
@@ -64,7 +64,7 @@ jobs:
                   suffix=$(echo "$custom_version_orig" | grep -o '[0-9]*$')
                   suffix="-$((suffix + 1))"
               fi
-              
+
               echo "next_version_suffix=$suffix"
               echo "next_version_suffix=$suffix" >> $GITHUB_OUTPUT
           fi

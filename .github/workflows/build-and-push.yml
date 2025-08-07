@@ -41,7 +41,7 @@ jobs:
           context: ./
           build-args: OLLAMA_VERSION=${{ inputs.ollama_version }}
           push: true
-          tags: svenbrnn/runpod-ollama:${{ inputs.ollama_version }}${{ inputs.next_version_suffix }},svenbrnn/runpod-ollama:latest
+          tags: hoblin/runpod-ollama:${{ inputs.ollama_version }}${{ inputs.next_version_suffix }},hoblin/runpod-ollama:latest
 
   create-release:
     name: 🏷️ Create GitHub Release

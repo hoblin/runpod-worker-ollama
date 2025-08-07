@@ -1,13 +1,15 @@
 # Runpod serverless runner for ollama
 
 ## Simplified version with request pass-through to ollama.
+
 ---
+
 ## How to use
 
-Start a runpod serverless with the docker container ``svenbrnn/runpod-ollama:latest``. Set ``MODEL_NAME`` environment to a model from ollama.com to automatically download a model.
+Start a runpod serverless with the docker container ``hoblin/runpod-ollama:latest``. Set ``MODEL_NAME`` environment to a model from ollama.com to automatically download a model.
 A mounted volume will be automatically used.
 
-[![RunPod](https://api.runpod.io/badge/SvenBrnn/runpod-worker-ollama)](https://www.runpod.io/console/hub/SvenBrnn/runpod-worker-ollama)
+[![RunPod](https://api.runpod.io/badge/hoblin/runpod-worker-ollama)](https://www.runpod.io/console/hub/hoblin/runpod-worker-ollama)
 
 ## Environment variables
 
@@ -17,7 +19,7 @@ A mounted volume will be automatically used.
 
 ## Test requests for runpod.io console
 
-See the [test_inputs](./test_inputs) directory for example test requests. 
+See the [test_inputs](./test_inputs) directory for example test requests.
 
 
 ## Streaming
