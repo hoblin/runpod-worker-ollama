@@ -3,8 +3,11 @@
     {
       "name": "execute_a_prompt",
       "input": {
-        "model": "phi3",
-        "prompt": "Say: Hallo World!"
+        "route": "/v1/completions",
+        "input": {
+          "model": "phi3",
+          "prompt": "Say: Hallo World!"
+        }
       },
       "timeout": 120000
     }
