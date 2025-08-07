@@ -13,7 +13,7 @@ class OllamaEngine:
         print("Generating response for job_input:", job_input)
 
         # Handle models request separately
-        if hasattr(job_input, 'route') and job_input.route == "/v1/models":
+        if job_input.get('route') == "/v1/models":
             async for response in self._handle_models():
                 yield response
         else:
@@ -38,12 +38,11 @@ class OllamaEngine:
     async def _handle_request(self, job_input):
         """Handle requests using Ollama's native API"""
         try:
-            # Get input data and route
-            input_data = job_input.input.copy() if hasattr(job_input, 'input') else {}
-            route = job_input.route if hasattr(job_input, 'route') else '/api/chat'
+            # Get route and the actual input data
+            route = job_input.get('route', '/api/chat')
 
-            # Pass everything through (model already included)
-            ollama_body = input_data.copy()
+            # The actual data to send to Ollama is in the nested "input" field
+            ollama_body = job_input.get('input', {})
 
             print(f"Ollama request to {route}: {ollama_body}")
 

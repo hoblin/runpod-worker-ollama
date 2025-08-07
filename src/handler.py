@@ -1,16 +1,15 @@
 import runpod
-from utils import JobInput
 from engine import OllamaEngine
 
 async def handler(job: any):
     # Just dump the whole input to the console and then return an {"ok": True} response
     print('Job:', job)
 
-    job_input = JobInput(job["input"])
+    job_input = job["input"]
     engine_class = OllamaEngine
     engine = engine_class()  # Instantiate the engine
 
-    job = engine.generate(job_input)  # Call generate with job_input
+    job = engine.generate(job_input)  # Call generate with job_input directly
 
     async for batch in job:
         yield batch
