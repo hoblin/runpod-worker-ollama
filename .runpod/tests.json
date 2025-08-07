@@ -3,7 +3,7 @@
     {
       "name": "execute_a_prompt",
       "input": {
-        "route": "/v1/completions",
+        "route": "/api/chat",
         "input": {
           "model": "phi3",
           "prompt": "Say: Hallo World!"
