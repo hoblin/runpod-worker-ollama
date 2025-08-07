@@ -1,4 +1,4 @@
 runpod
 python-dotenv
-openai
+dotenv
 orjson==3.10.14

@@ -1,5 +1,9 @@
 {
   "input": {
-    "prompt": "How are you?"
+      "route": "/v1/completions",
+      "input": {
+          "model": "gpt-oss:20b",
+          "prompt": "How are you?"
+      }
   }
 }

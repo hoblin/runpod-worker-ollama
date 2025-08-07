@@ -3,7 +3,6 @@ import os
 import aiohttp
 
 from dotenv import load_dotenv
-from utils import JobInput
 
 class OllamaEngine:
     def __init__(self):
