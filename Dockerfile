@@ -1,4 +1,4 @@
-ARG OLLAMA_VERSION=0.11.9
+ARG OLLAMA_VERSION=0.11.10
 
 # Use an official base${OLLAMA_VERSION} image with your desired version
 FROM ollama/ollama:${OLLAMA_VERSION}
